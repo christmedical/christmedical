@@ -1,5 +1,5 @@
 <template lang="html">
-  <md-sidenav class="md-left Sidebar__Wrapper"
+  <md-sidenav class="md-left side-bar-wrapper"
     v-on:open="lockBodyScroll"
     v-on:close="unlockBodyScroll"
     ref="leftSidenav">
@@ -62,12 +62,11 @@
         type: Array,
         default() {
           return [
-            { text: 'Favoritos', icon: 'favorite', url: '' },
-            { text: 'Configs', icon: 'settings', url: '', sub: [
-              { text: 'Rowing', icon: 'rowing', url: '' },
-              { text: 'Ethernet', icon: 'settings_ethernet', url: '' },
+            { text: 'Patient Overview', icon: 'favorite', url: '' },
+            { text: 'Reports', icon: 'reports', url: '', sub: [
+              { text: 'History', icon: 'assignment-ind', url: '' }
             ] },
-            { text: 'delta', icon: 'change_history', url: '' },
+            { text: 'Settings', icon: 'settings', url: '' }
           ];
         },
       },
@@ -87,10 +86,10 @@
 </script>
 
 <style>
-  .Sidebar__Wrapper {}
+  .side-bar-wrapper {}
 
-  .Sidebar__Wrapper.md-sidenav.md-active .md-sidenav-content,
-  .Sidebar__Wrapper.md-sidenav.md-active .md-sidenav-backdrop {
+  .side-bar-wrapper.md-sidenav.md-active .md-sidenav-content,
+  .side-bar-wrapper.md-sidenav.md-active .md-sidenav-backdrop {
     height: 100% !important;
     max-height: 100vh !important;
     position: fixed !important;
